@@ -130,7 +130,7 @@ h1 {
 .current-date {
   font-weight: 600;
   font-size: 1.1rem;
-  min-width: 220px;
+  min-width: 120px;
   text-align: center;
   color: #90e0ef;
 }
@@ -624,5 +624,9 @@ h1 {
   }
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+  .timeline-header {
+    flex-direction: column;
+    gap: 20px;
   }
 }
