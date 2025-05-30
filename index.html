@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN & DSA Learning Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>MERN Stack & DSA Learning Plan</h1>
+        <p class="subtitle">
+          A comprehensive 3-month roadmap to become a proficient MERN stack
+          developer while mastering Data Structures and Algorithms in C++
+        </p>
+        <div class="stats">
+          <div class="stat-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>12 Weeks</h3>
+            <p>June 1 - August 24, 2024</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-code"></i>
+            <h3>150+ DSA</h3>
+            <p>LeetCode Problems</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>3 Projects</h3>
+            <p>Real-world applications</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <h3>7h/Day</h3>
+            <p>Structured learning</p>
+          </div>
+        </div>
+      </header>
+      <div class="dashboard">
+        <div class="timeline">
+          <div class="timeline-header">
+            <h2><i class="fas fa-road"></i> Learning Timeline</h2>
+            <div class="date-controls">
+              <button id="prev-week">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="current-date" id="current-week">
+                Week 1: June 3 - June 8
+              </div>
+              <button id="next-week">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="week-container" id="week-container">
+            <!-- Weeks will be dynamically added here -->
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="resources">
+            <div class="section-header">
+              <i class="fas fa-book"></i>
+              <h2>Learning Resources</h2>
+            </div>
+            <div class="resource-list">
+              <div class="resource">
+                <div class="resource-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>JavaScript & React</h3>
+                  <p>Official documentation and tutorials</p>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                    class="resource-link"
+                    target="_blank"
+                    >MDN JavaScript Docs</a
+                  >
+                  <a
+                    href="https://reactjs.org/docs/getting-started.html"
+                    class="resource-link"
+                    target="_blank"
+                    >React Documentation</a
+                  >
+                </div>
+              </div>
+              <div class="resource">
+                <div class="resource-icon">
+                  <i class="fab fa-node"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>Node.js & Express</h3>
+                  <p>Backend development resources</p>
+                  <a
+                    href="https://nodejs.org/en/docs/"
+                    class="resource-link"
+                    target="_blank"
+                    >Node.js Docs</a
+                  >
+                  <a
+                    href="https://expressjs.com/"
+                    class="resource-link"
+                    target="_blank"
+                    >Express.js Guide</a
+                  >
+                </div>
+              </div>
+              <div class="resource">
+                <div class="resource-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>MongoDB</h3>
+                  <p>Database tutorials and references</p>
+                  <a
+                    href="https://www.mongodb.com/docs/"
+                    class="resource-link"
+                    target="_blank"
+                    >MongoDB Docs</a
+                  >
+                  <a
+                    href="https://mongoosejs.com/docs/guide.html"
+                    class="resource-link"
+                    target="_blank"
+                    >Mongoose Guide</a
+                  >
+                </div>
+              </div>
+              <div class="resource">
+                <div class="resource-icon">
+                  <i class="fas fa-cubes"></i>
+                </div>
+                <div class="resource-info">
+                  <h3>DSA in C++</h3>
+                  <p>Data Structures & Algorithms</p>
+                  <a
+                    href="https://www.learncpp.com/"
+                    class="resource-link"
+                    target="_blank"
+                    >Learn C++</a
+                  >
+                  <a
+                    href="https://leetcode.com/"
+                    class="resource-link"
+                    target="_blank"
+                    >LeetCode Problems</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="section-header">
+              <i class="fas fa-chart-line"></i>
+              <h2>Learning Progress</h2>
+            </div>
+            <div class="progress-bars">
+              <div class="progress-item">
+                <div class="progress-top">
+                  <span class="progress-title">MERN Stack</span>
+                  <span class="progress-percent" id="mern-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="mern-progress"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-top">
+                  <span class="progress-title">DSA (C++)</span>
+                  <span class="progress-percent" id="dsa-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="dsa-progress"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-top">
+                  <span class="progress-title">Project Completion</span>
+                  <span class="progress-percent" id="project-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="project-progress"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-top">
+                  <span class="progress-title">LeetCode Problems</span>
+                  <span class="progress-percent" id="leetcode-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="leetcode-progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+        <div class="section-header">
+          <i class="fas fa-laptop-code"></i>
+          <h2>Projects Roadmap</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3><i class="fas fa-users"></i> Project 1: DevConnector</h3>
+            <p>
+              A social platform for developers to connect, share posts, and
+              collaborate.
+            </p>
+            <ul class="project-features">
+              <li>User Profiles with social info</li>
+              <li>Posts with comments and likes</li>
+              <li>Follow/unfollow other users</li>
+              <li>Real-time notifications</li>
+            </ul>
+            <div class="project-status">
+              <div class="status-dot in-progress"></div>
+              <span>Week 6: In Progress</span>
+            </div>
+            <div class="project-checkbox">
+              <input type="checkbox" id="project1" data-project="1" />
+              <label for="project1">Mark as completed</label>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>
+              <i class="fas fa-shopping-cart"></i> Project 2: E-Commerce Mini
+            </h3>
+            <p>
+              An online store with product listings, shopping cart, and
+              checkout.
+            </p>
+            <ul class="project-features">
+              <li>Product listing with filters</li>
+              <li>Shopping cart functionality</li>
+              <li>Checkout with payment gateway</li>
+              <li>Order history tracking</li>
+            </ul>
+            <div class="project-status">
+              <div class="status-dot planned"></div>
+              <span>Week 7: Planned</span>
+            </div>
+            <div class="project-checkbox">
+              <input type="checkbox" id="project2" data-project="2" />
+              <label for="project2">Mark as completed</label>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fas fa-lightbulb"></i> Project 3: Unique App</h3>
+            <p>
+              A creative real-world problem-solving application (Your unique
+              idea).
+            </p>
+            <ul class="project-features">
+              <li>Custom innovative features</li>
+              <li>User authentication and profiles</li>
+              <li>Responsive design</li>
+              <li>Cloud deployment</li>
+            </ul>
+            <div class="project-status">
+              <div class="status-dot planned"></div>
+              <span>Week 9: Planned</span>
+            </div>
+            <div class="project-checkbox">
+              <input type="checkbox" id="project3" data-project="3" />
+              <label for="project3">Mark as completed</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="day-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Day Details</h2>
+          <button class="close-btn" id="close-modal">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Day details will be added here -->
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
